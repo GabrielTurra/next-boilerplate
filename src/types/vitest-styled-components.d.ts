@@ -34,7 +34,5 @@ export interface StyledComponentsSerializerOptions {
 }
 
 export declare const styleSheetSerializer: NewPlugin & {
-  setStyleSheetSerializerOptions: (
-    options?: StyledComponentsSerializerOptions
-  ) => void;
+  setStyleSheetSerializerOptions: (options?: StyledComponentsSerializerOptions) => void;
 };

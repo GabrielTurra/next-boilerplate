@@ -31,4 +31,32 @@ module.exports = (plop) => {
       }
     ]
   });
+
+  plop.setGenerator('page', {
+    description: 'Create a page',
+    prompts: [
+      {
+        type: 'input',
+        name: 'name',
+        message: 'What is your page name?'
+      },
+      {
+        type: 'input',
+        name: 'path',
+        message: 'What is your page path? (One word per level. Empty for root)'
+      }
+    ],
+    actions: [
+      {
+        type: 'add',
+        path: '../src/app/{{pathCase path}}/{{kebabCase name}}/page.tsx',
+        templateFile: 'templates/page/page.tsx.hbs'
+      },
+      {
+        type: 'add',
+        path: '../src/app/{{pathCase path}}/{{kebabCase name}}/layout.tsx',
+        templateFile: 'templates/page/layout.tsx.hbs'
+      }
+    ]
+  });
 };

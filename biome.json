@@ -7,7 +7,7 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "ignore": ["node_modules", ".next", ".husky", "package-lock.json"]
+    "ignore": ["node_modules", ".next", ".husky", "package-lock.json", "generators"]
   },
   "formatter": {
     "enabled": true,

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "c": "git add . && npx cz",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -11,8 +12,7 @@
     "generate": "npx plop --plopfile generators/plopfile.js",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "commit": "git add . && npx cz",
-    "shadcn-add": "npx shadcn@canary add"
+    "shadcn:add": "npx shadcn@canary add"
   },
   "dependencies": {
     "@radix-ui/react-navigation-menu": "^1.2.5",

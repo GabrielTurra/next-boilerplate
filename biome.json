@@ -38,7 +38,8 @@
         "noExplicitAny": "off"
       },
       "style": {
-        "noParameterAssign": "off"
+        "noParameterAssign": "off",
+        "useImportType": "off"
       },
       "performance": {
         "noAccumulatingSpread": "off"

@@ -1,5 +1,6 @@
 'use client';
 
+import * as Sentry from '@sentry/nextjs';
 import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
 import { Terminal } from 'lucide-react';
 import { useEffect } from 'react';
@@ -12,6 +13,7 @@ export default function ErrorBoundary({
   reset: () => void;
 }) {
   useEffect(() => {
+    Sentry.captureException(error);
     console.error(error);
   }, [error]);
 

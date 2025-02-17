@@ -3,6 +3,9 @@ import { Preview, ReactRenderer } from '@storybook/react';
 import '@/styles/globals.css';
 
 const preview: Preview = {
+  parameters: {
+    layout: 'centered'
+  },
   decorators: [
     withThemeByClassName<ReactRenderer>({
       themes: {

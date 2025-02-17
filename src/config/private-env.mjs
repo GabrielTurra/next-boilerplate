@@ -1,8 +1,7 @@
 import { z } from 'zod';
 
 const privateEnvSchema = z.object({
-  SENTRY_AUTH_TOKEN: z.string().min(3),
-  NEXT_CLARITY_ID: z.string().min(3)
+  SENTRY_AUTH_TOKEN: z.string().min(3)
 });
 
 if (typeof window !== 'undefined') {

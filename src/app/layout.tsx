@@ -1,9 +1,9 @@
 import { Providers } from '@/providers';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import Clarity from '@microsoft/clarity';
 
 import '@/styles/globals.css';
+import { ClarityConfig } from '@/lib/clarity';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,14 +17,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  if (process.env.NEXT_CLARITY_ID) {
-    Clarity.init(process.env.NEXT_CLARITY_ID);
-  }
-
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Providers>{children}</Providers>
+        <ClarityConfig>
+          <Providers>{children}</Providers>
+        </ClarityConfig>
       </body>
     </html>
   );

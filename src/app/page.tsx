@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Home() {
-  return <h1>Homepage</h1>;
+  return <Image src="/static/boilerplate-logo.svg" width="200" height="50" alt="Logo" />;
 }

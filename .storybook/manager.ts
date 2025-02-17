@@ -5,7 +5,7 @@ addons.setConfig({
   theme: create({
     base: 'dark',
     appBg: '#0f0717',
-    brandImage: '/static/boilerplate-logo.svg',
+    brandImage: '/static/boilerplate-logo-white.svg',
     textColor: '#fff'
   })
 });

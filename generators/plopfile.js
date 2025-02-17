@@ -41,7 +41,7 @@ module.exports = (plop) => {
         actions.push({
           type: 'add',
           path: '../src/components/ui/{{kebabCase name}}/{{kebabCase name}}.tsx',
-          templateFile: 'templates/component/component.tsx.hbs'
+          templateFile: 'templates/component/ui-component.tsx.hbs'
         });
 
         actions.push({

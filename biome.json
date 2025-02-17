@@ -7,7 +7,14 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "ignore": ["node_modules", ".next", ".husky", "package-lock.json", "generators"]
+    "ignore": [
+      "node_modules",
+      ".next",
+      ".husky",
+      "package-lock.json",
+      "generators",
+      "tsconfig.json"
+    ]
   },
   "formatter": {
     "enabled": true,

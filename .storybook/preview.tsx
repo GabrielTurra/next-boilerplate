@@ -1,10 +1,17 @@
-import React from 'react';
+import { withThemeByClassName } from '@storybook/addon-themes';
+import { Preview, ReactRenderer } from '@storybook/react';
 import '@/styles/globals.css';
 
-export const decorators = [
-  (Story) => (
-    <>
-      <Story />
-    </>
-  )
-];
+const preview: Preview = {
+  decorators: [
+    withThemeByClassName<ReactRenderer>({
+      themes: {
+        light: '',
+        dark: 'dark'
+      },
+      defaultTheme: 'light'
+    })
+  ]
+};
+
+export default preview;

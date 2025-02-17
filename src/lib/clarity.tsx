@@ -10,7 +10,7 @@ interface IClarityConfig {
 
 export const ClarityConfig = ({ children }: IClarityConfig) => {
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
       Clarity.init(publicEnv.NEXT_PUBLIC_CLARITY_ID);
     }
   }, []);

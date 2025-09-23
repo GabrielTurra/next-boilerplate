@@ -1,0 +1,32 @@
+name: Github Actions Boilerplate Setup
+on: [push, pull_request]
+
+jobs: 
+  build: 
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with: 
+          node-version: 22.12.x
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Setup Biome
+        uses: biomejs/setup-biome@v2
+        with:
+          version: latest
+
+      - name: Linting
+        run: biome ci .
+
+      - name: Testing
+        run: npm run test
+
+      - name: Build
+        run: npm run build

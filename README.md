@@ -1,6 +1,11 @@
 # Next 15 Boilerplate
 Esse é um boilerplate que me ajuda a otimizar configurações e tarefas repetitivas em meus projetos.
 
+Utilize o seguinte comando para criar seu projeto:
+```bash 
+npx create-next-app@latest -e https://github.com/GabrielTurra/next-boilerplate
+```
+
 <p>✅ Next.js 15.4</p>
 <p>✅ Automação com Plop para geração de componentes e páginas (veja abaixo as intruções).</p>
 <p>✅ Commits padronizados com Husky, Lint Staged e Commitzen (veja abaixo as intruções).</p>

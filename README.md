@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next 15 Boilerplate
+Esse é um boilerplate que me ajuda a otimizar configurações e tarefas repetitivas em meus projetos.
 
-## Getting Started
+<p>✅ Next.js 15.4</p>
+<p>✅ Automação com Plop para geração de componentes e páginas (veja abaixo as intruções).</p>
+<p>✅ Commits padronizados com Husky, Lint Staged e Commitzen (veja abaixo as intruções).</p>
+<p>✅ Github Actions configurado para CI/CD</p>
+<p>✅ Ambientes públicos e privados configurados de forma independente.</p> 
+<p>✅ Shadcn e Tailwind para estilização.</p> 
+<p>✅ Biome.js como linter.</p>
+<p>✅ Testes de componentes com Vitest.</p>
+<p>✅ Storybook para documentação de componentes e páginas.</p> 
 
-First, run the development server:
+# Pré-requisitos
+- Node 20 ou superior.
+- Instalar de forma global o [Commitzen](https://www.npmjs.com/package/commitizen/).
+
+# Automações
+Primeiro comece rodando em seu terminal:
+```bash 
+npm run generate
+```
+## Componentes
+Aqui 2 opções serão exibidas:
+
+### Componentes de UI 
+Esses são componentes que ditam a identidade visual da aplicação: ``botões, alerts, badges`` e outros componentes que carregam identidade visual consigo. 
+
+Este será criado em ``src/components/ui/`` e além da própria estrutura também irão gerar de forma automática:
+- 1 arquivo de testes
+- 1 storybook
+
+### Componentes comuns
+Utilize-os para a criação de: ``Sections, Wrappers``, e outros componentes que sao tratados como containers para outros conteúdos como um Hero ou um Form.
+
+## Páginas
+Ao selecionar, um arquivo será criado de acordo com o nome informado no terminal no caminho ``src/app``.
+
+# Commits
+
+Antes de tudo você precisará instalar de forma global o [Commitzen](https://www.npmjs.com/package/commitizen/)
+
+Para manter o padrão e as boas práticas dentro do projeto ao invés de utilizar ``git commit`` utilize o seguinte comando:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run c
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Este irá automaticamente rodar 2 comandos: ``git add .`` e ``npx cz`` e logo após as informações serem preechidas corretamente o comando ``git commit`` será executado.
